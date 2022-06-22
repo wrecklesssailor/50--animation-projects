@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html {
+    font-size: 10px;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 100rem;
+    height: 70rem;
+    background-color: aliceblue;
+    border-radius: 3rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #b2485b, #ff617c);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    box-shadow: 1.8rem 0 5rem rgba(0, 0, 0, 0.174);
+    transition: all 1.6s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.banner {
+    position: absolute;
+    top: 25%;
+    left: -30rem;
+    text-align: center;
+    color: #fff;
+    width: 30rem;
+    transition: all 1.6s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: 900;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner p {
+    font-size: 2rem;
+}
+
+.primary-bg button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 0.1rem solid #fff;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.primary-bg button:hover {
+    background-color: aliceblue;
+    color: #ff617c;
+}
+
+.sign-up-form {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 0;
+    transition: all 1.6s cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    .form-container {
+        opacity: 0; 
+        transition: all 1.6s cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+.sign-up-form h1 {
+    font-size: 4rem;
+    color: #ff617c;
+    margin-bottom: 4rem;
+}
+
+.sign-up-form p {
+    font-size:  2rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 4rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    gap: .5rem;
+    margin-bottom: 2.5rem;
+}
+
+.social-media em {
+    width: 4rem;
+    height: 4rem;
+    border: .1px solid #b2485b;
+    border-radius: 50%;
+    color: #b2485b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.social-media em:hover {
+    font-size: 2.3rem;
+    transform: rotate(360deg);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
+}
+
+.input-item {
+    position: relative;
+}
+
+.input-item input {
+    width: 28rem;
+    height: 4rem;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #d9a0a878;
+    color:#b2485b;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: inset .6rem 1rem 1rem #b2485b79;
+    transition: all .5s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.input-item input:focus {
+    background-color: rgba(255, 182, 193, 0.4);
+    box-shadow: inset .6rem 1rem 1rem #c7c7c779;}
+
+.input-item em {
+    position: absolute;
+    top: 50%;
+    left: 1.3rem;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #b2485b;
+}
+
+.sign-up-form button {
+    width: 16rem;
+    height: 5rem;
+    background-color: #ff617c;
+    border: none;
+    border-radius: 3rem;
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.sign-up-form button:hover {
+    background-color: aliceblue;
+    color: #ff617c;
+    border: 0.1rem solid #ff617c;
+}
+
+.container.change .primary-bg {
+    width: 40%;
+}
+
+.container.change .sign-up-form {
+    width: 60rem;
+}
+.container.change .form-container {
+    opacity: 1;
+}
+.container.change .banner {
+    left: 5rem;
+}
